@@ -1,1 +1,2 @@
 phishing-detector/model.safetensors filter=lfs diff=lfs merge=lfs -text
+vectorizer.pkl filter=lfs diff=lfs merge=lfs -text
