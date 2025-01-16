@@ -1,1 +1,1 @@
-Creating a realtime AI email Phishing detector using BERT for Text Classification
+BERT Phishing Text Classifier for AI_Email_Phishing_detector
