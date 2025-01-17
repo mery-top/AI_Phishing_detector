@@ -6,6 +6,7 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from google.auth.transport.requests import Request
 import requests
 from datetime import datetime
 
@@ -24,7 +25,7 @@ def authenticate_gmail():
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
                 'credentials.json', SCOPES)
-            creds = flow.run_local_server(port=0)
+            creds = flow.run_local_server(port=8888)
         
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
@@ -82,3 +83,18 @@ def get_message(service, msg_id):
         print(f'An error occurred: {error}')
         return None
 
+# start_date = '2025/01/14'  # Start date
+# end_date = '2025/01/15'    # End date
+
+# # Authenticate and fetch emails within the date range
+# service = authenticate_gmail()
+# emails = list_emails(service, start_date=start_date, end_date=end_date)
+
+
+# for email in emails:
+#     msg_id = email['id']
+#     message = get_message(service, msg_id)
+    
+#     if message:
+#         email_body = message['body']
+#         print(email_body)
