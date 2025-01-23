@@ -1,1 +1,1 @@
-BERT Phishing Text Classifier for AI_Email_Phishing_detector
+BERT Phishing Text Classifier and DNN url classifier for AI_Email_Phishing_detector
